@@ -36,7 +36,7 @@ input("Press Enter to continue...\n")
 # Ask the user what character he/she wants to replace
 charInput1 = input("Enter a character that you want to replace: ")
 charInput2 = input("Enter a character that you want to be replaced: ")
-print(userInput.replace(charInput2,charInput1))
+print("The new word is ", userInput.replace(charInput2,charInput1))
 input("Press Enter to continue...\n")
 
 # Ask the user to enter two new words and combine it together with a space in between
@@ -63,4 +63,4 @@ input("Press Enter to continue...\n")
 pyIdfInput = input("Enter a word to check if it's a valid python identifier: ")
 is_idtf = pyIdfInput.isidentifier()
 print("The word you typed is a valid python identifier?", convertor(is_idtf))
-
+print("The end")
