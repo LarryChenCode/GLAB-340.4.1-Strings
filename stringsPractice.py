@@ -23,14 +23,14 @@ print("The substring ", substringInput.lower(), " appears how many times? ", use
 input("Press Enter to continue...\n")
 
 # Show the reversed word that the user entered
-print("Show the reversed version of the word: \n", userInput[::-1])
+print("Show the reversed version of the word: ", userInput[::-1])
 input("Press Enter to continue...\n")
 
 # Ask the user what parts of the word he/she wants to show
 print("Now you can decide what parts of the word he/she wants to show")
 startIndex = int(input("Enter a starting number: "))
 endIndex =int(input("Enter a ending number: "))
-print("The world is sliced as ", userInput[startIndex-1:endIndex+1])
+print("The word is sliced as ", userInput[startIndex-1:endIndex])
 input("Press Enter to continue...\n")
 
 # Ask the user what character he/she wants to replace
@@ -46,12 +46,21 @@ secondInput = input("Enter the second word: ")
 print("The output is {} {}".format(firstInput, secondInput))
 input("Press Enter to continue...\n")
 
+# Define a function to turn True/False into Yes/No
+def convertor(yn):
+    if yn == True:
+        return "Yes"
+    else:
+        return "No"
+
 # Ask the user to enter a new word and check if it's is a palindrome
 palInput = input("Enter a word to check if it's a palindrome: ")
-print("The word you typed is a palindrome?", palInput.lower() == palInput[::-1].lower())
+is_pal = palInput.lower() == palInput[::-1].lower()
+print("The word you typed is a palindrome?", convertor(is_pal))
 input("Press Enter to continue...\n")
 
 # Ask the user to enter a new word and check if it can be a avalid python identifier
 pyIdfInput = input("Enter a word to check if it's a valid python identifier: ")
-print("The word you typed is a valid python identifier?", pyIdfInput.isidentifier())
+is_idtf = pyIdfInput.isidentifier()
+print("The word you typed is a valid python identifier?", convertor(is_idtf))
 
